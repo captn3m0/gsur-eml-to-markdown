@@ -23,8 +23,8 @@ def convert_to_markdown(file):
 		re_clicks = r"(.*)\s+Clicks \(web\)"
 		re_impressions = r"(.*)\s+Impressions \(web\)"
 		re_url_stats = r"(?P<url>^http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+$)\n+(?P<num>(?:\+?[\w\.]+))"
-		re_growing_queries = r"(?P<query>.*)\n+(?P<num>\+?[\d\.]+) clicks \((?P<device>\w+)\)"
-		re_top_queries = r"(?P<query>.{6,})\n{2}(?P<num>\d+$)"
+		re_growing_queries = r"(?P<query>.*)\n+(?P<num>\+?[\d\.]+K?) clicks \((?P<device>\w+)\)"
+		re_top_queries = r"(?P<query>.{6,})\n{2}(?P<num>\d+K?$)"
 		re_devices = r"Desktop Mobile Tablet\s+^(?P<desktop>(?:\d|\.)+[A-Z]?) (?P<mobile>(?:\d|\.)+[A-Z]?) (?P<tablet>(?:\d|\.)+[A-Z]?)$"
 
 		# Skip the first two matches
